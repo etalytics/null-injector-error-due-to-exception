@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MyFailingService} from "./my-failing.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'null-injector-error-due-to-exception';
+  constructor(
+    private readonly myFailingService: MyFailingService
+  ) {
+    console.log('######## myFailingService = ', myFailingService);
+  }
 }
