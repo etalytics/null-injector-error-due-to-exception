@@ -1,5 +1,17 @@
 # NullInjectorErrorDueToException
 
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/etalytics/null-injector-error-due-to-exception)
+
+When there is an exception during the creation of a service or component during injection, a `NullInjectorError` is reported:
+
+    NullInjectorError: R3InjectorError(AppModule)[MyFailingService -> MyFailingService -> MyFailingService]:
+    NullInjectorError: No provider for MyFailingService!
+
+But this error message is misleading, it should rather tell me that there _is_ a provider, but the creation of the instance has failed.
+
+-----
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
 
 ## Development server
